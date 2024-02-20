@@ -29,12 +29,12 @@ jobs:
         run: |
           hello
           type hello
-          which brew
-          which fish
+          type brew
+          type fish
           fish --version
-          which atuin
+          type atuin
           atuin --version
-          which http
+          type http
           http --version
           type teller
           teller version
@@ -48,7 +48,7 @@ jobs:
           gh --version
           type jq
           jq --version
-          which tig
+          type tig
           tig --version
           type zellij
           zellij --version
@@ -74,7 +74,7 @@ jobs:
           direnv --version
           type ruff
           ruff --version
-          which vim
+          type vim
           vim --version
           type rg
           rg --version
