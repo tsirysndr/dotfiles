@@ -10,7 +10,8 @@ secrets = ["CLOUDFLARE_ROOT_KEY"]
 
 homebrew {
   packages = [
-    "fish"
+    "fish",
+    "atuin"
   ]
 }
 
