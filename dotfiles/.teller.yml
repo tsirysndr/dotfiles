@@ -1,0 +1,54 @@
+project: dotfiles
+
+# Set this if you want to carry over parent process' environment variables
+# carry_env: true
+
+#
+# Variables
+#
+# Feel free to add options here to be used as a variable throughout
+# paths.
+#
+opts:
+  region: env:AWS_REGION # you can get env variables with the 'env:' prefix, for default values if env not found use comma. Example: env:AWS_REGION,{DEFAULT_VALUE}
+  stage: development
+
+#
+# Providers
+#
+providers:
+  # GOOGLE_APPLICATION_CREDENTIALS=foobar.json
+  # https://cloud.google.com/secret-manager/docs/reference/libraries#setting_up_authentication
+  google_secretmanager:
+    env:
+      CARGO_REGISTRY_TOKEN_SECRET:
+        # need to supply the relevant version (versions/1)
+        path: projects/400737752375/secrets/cargo_registry_token/versions/1
+      CLOUDFLARE_ROOT_KEY:
+        path: projects/400737752375/secrets/cloudflare_root_key/versions/1
+      AWS_ACCESS_KEY_ID:
+        path: projects/400737752375/secrets/cf_aws_access_key_id/versions/1
+      AWS_SECRET_ACCESS_KEY:
+        path: projects/400737752375/secrets/cf_aws_secret_access_key/versions/1
+      DAGGER_CLOUD_TOKEN:
+        path: projects/400737752375/secrets/dagger_cloud_token/versions/1
+      DENO_DEPLOY_TOKEN:
+        path: projects/400737752375/secrets/deno_deploy_token/versions/1
+      HEX_API_KEY:
+        path: projects/400737752375/secrets/hex_api_key/versions/1
+      CONSUMER_KEY:
+        path: projects/400737752375/secrets/mvola_consumer_key/versions/1
+      CONSUMER_SECRET:
+        path: projects/400737752375/secrets/mvola_consumer_secret/versions/1
+      NETLIFY_AUTH_TOKEN:
+        path: projects/400737752375/secrets/netlify_auth_token/versions/1
+      PULUMI_ACCESS_TOKEN:
+        path: projects/400737752375/secrets/pulumi_access_token/versions/1
+      SHUTTLE_API_KEY:
+        path: projects/400737752375/secrets/shuttle_api_key/versions/1
+      SONAR_TOKEN:
+        path: projects/400737752375/secrets/sonar_token/versions/1
+      SPIN_AUTH_TOKEN:
+        path: projects/400737752375/secrets/spin_auth_token/versions/1
+      WASMER_TOKEN:
+        path: projects/400737752375/secrets/wasmer_token/versions/1
