@@ -116,7 +116,7 @@ fi
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
-source ~/.local/share/blesh/ble.sh
+[[ -f ~/.local/share/blesh/ble.sh ]] && source ~/.local/share/blesh/ble.sh
 
 export DENO_INSTALL="$HOME/.deno"
 export PATH=$DENO_INSTALL/bin:$PATH
