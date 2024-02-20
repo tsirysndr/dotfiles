@@ -29,6 +29,8 @@ jobs:
         run: |
           ls -la ~/.bashrc
           hello
+          type gitleaks
+          gitleaks version
           type buf
           buf --version
           type rtx

@@ -33,6 +33,7 @@ pkgx {
     "fzf",
     "gh",
     "git",
+    "gitleaks",
     "gleam",
     "glow",
     "go",
