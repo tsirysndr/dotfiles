@@ -14,7 +14,8 @@ homebrew {
     "atuin",
     "httpie",
     "vim",
-    "tig"
+    "tig",
+    "oh-my-posh",
   ]
 }
 
@@ -49,6 +50,7 @@ pkgx {
     "bun",
     "tofu",
     "lima",
-    "wasmer"
+    "wasmer",
+    "zoxide"
   ]
 }
