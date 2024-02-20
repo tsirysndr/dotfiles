@@ -25,14 +25,15 @@ jobs:
       - name: Verify dotfiles
         shell: bash
         run: |
-          source ~/.bashrc
+          . ~/.bashrc
+          which brew
           hello
           type hello
-          type fish
+          which fish
           fish --version
-          type atuin
+          which atuin
           atuin --version
-          type http
+          which http
           http --version
           type teller
           teller version
@@ -46,7 +47,7 @@ jobs:
           gh --version
           type jq
           jq --version
-          type tig
+          which tig
           tig --version
           type zellij
           zellij --version
@@ -72,7 +73,7 @@ jobs:
           direnv --version
           type ruff
           ruff --version
-          type vim
+          which vim
           vim --version
           type rg
           rg --version
