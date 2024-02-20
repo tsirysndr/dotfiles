@@ -10,50 +10,71 @@ secrets = ["CLOUDFLARE_ROOT_KEY"]
 
 homebrew {
   packages = [
-    "fish",
     "atuin",
+    "dagger",
+    "fish",
     "httpie",
-    "vim",
-    "tig",
     "oh-my-posh",
     "opam",
-    "dagger"
+    "snyk-cli",
+    "tig",
+    "vim"
   ]
 }
 
 pkgx {
   packages = [
-    "teller",
-    "deno",
-    "lvim",
-    "git",
-    "gh",
-    "jq",
-    "zellij",
-    "http",
-    "go",
-    "zig",
-    "pulumi",
-    "gleam",
-    "elixir",
-    "terraform",
-    "fzf",
+    "atuin",
     "bat",
-    "direnv",
-    "uv",
-    "ruff",
-    "rg",
-    "glow",
-    "skate",
-    "kubectl",
-    "docker",
-    "rye",
-    "minikube",
     "bun",
-    "tofu",
+    "deno",
+    "dhall",
+    "direnv",
+    "docker",
+    "elixir",
+    "fzf",
+    "gh",
+    "git",
+    "gleam",
+    "glow",
+    "go",
+    "grype",
+    "http",
+    "httpie",
+    "jq",
+    "kubectl",
     "lima",
+    "lvim",
+    "minikube",
+    "node",
+    "oh-my-posh",
+    "opam",
+    "pkl",
+    "pulumi",
+    "rg",
+    "ruff",
+    "rye",
+    "skate",
+    "snyk-cli",
+    "tell",
+    "terraform",
+    "tilt",
+    "tig",
+    "teller",
+    "tofu",
+    "trivy",
+    "uv",
+    "vim",
     "wasmer",
+    "yq",
+    "zellij",
     "zoxide",
-    "tilt"
+    "zig"
+  ]
+}
+
+rtx {
+  packages = [
+    "node@19.8.1"
   ]
 }

@@ -28,10 +28,26 @@ jobs:
         shell: bash -i -e -o pipefail {0}
         run: |
           hello
+          type rtx
+          rtx --version
+          type node
+          node --version
           type hello
           type brew
           type fish
           fish --version
+          type pkl
+          pkl --version
+          type snyk
+          snyk version
+          type syft
+          syft version
+          type grype
+          grype version
+          type dhall
+          dhall --version
+          type trivy
+          trivy --version
           type tilt
           tilt version
           type atuin
