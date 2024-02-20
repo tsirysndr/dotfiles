@@ -53,6 +53,7 @@ pkgx {
     "tofu",
     "lima",
     "wasmer",
-    "zoxide"
+    "zoxide",
+    "tilt"
   ]
 }
