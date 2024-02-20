@@ -15,13 +15,11 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
-      - name: Remove existing bashrc
-        run: |
-          [ -f $HOME/.bashrc ] && rm $HOME/.bashrc || true
       - uses: tsirysndr/setup-envhub@v1
         with:
-          version: "v0.2.10"
+          version: v0.2.11
           dotfiles: github:tsirysndr/dotfiles
+          options: --backup
         env:
           CLOUDFLARE_ROOT_KEY: ${{ secrets.CLOUDFLARE_ROOT_KEY }}
       - name: Verify dotfiles
