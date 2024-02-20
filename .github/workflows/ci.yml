@@ -23,9 +23,8 @@ jobs:
         env:
           CLOUDFLARE_ROOT_KEY: ${{ secrets.CLOUDFLARE_ROOT_KEY }}
       - name: Verify dotfiles
-        shell: bash
+        shell: bash -i -e -o pipefail {0}
         run: |
-          source ~/.bashrc
           hello
           type hello
           which brew
