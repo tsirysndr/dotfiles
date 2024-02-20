@@ -25,10 +25,10 @@ jobs:
       - name: Verify dotfiles
         shell: bash
         run: |
-          . ~/.bashrc
-          which brew
+          source ~/.bashrc
           hello
           type hello
+          which brew
           which fish
           fish --version
           which atuin
