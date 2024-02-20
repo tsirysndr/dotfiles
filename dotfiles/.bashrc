@@ -112,7 +112,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+[[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
@@ -128,7 +128,7 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 eval "$(direnv hook bash)"
 
-eval $(dagger completion bash)
+eval "$(dagger completion bash)"
 
 eval "$(zoxide init bash)"
 
@@ -170,8 +170,8 @@ export ANDROID_HOME=$HOME/android-sdk
 PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export NODE_PATH=$NODE_PATH:`npm root -g`
 
-eval $(opam env --switch=default)
+eval "$(opam env --switch=default)"
 
-[[ -f ~/.envhub/secrets ]] && eval $(cat ~/.envhub/secrets)
+[[ -f ~/.envhub/secrets ]] && eval "$(cat ~/.envhub/secrets)"
 
-eval $(http https://install.envhub.sh/secrets "Authorization: Bearer $CLOUDFLARE_ROOT_KEY" "Accept: application/x-sh" --print=b)
+eval "$(http https://install.envhub.sh/secrets "Authorization: Bearer $CLOUDFLARE_ROOT_KEY" "Accept: application/x-sh" --print=b)"
