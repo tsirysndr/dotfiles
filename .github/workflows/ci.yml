@@ -1,0 +1,119 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v2
+      - name: Remove existing bashrc
+        run: rm -f ~/.bashrc
+      - uses: tsirysndr/setup-envhub@v1
+        with:
+          version: "v0.2.10"
+          dotfiles: github:tsirysndr/dotfiles
+        env:
+          CLOUDFLARE_ROOT_KEY: ${{ secrets.CLOUDFLARE_ROOT_KEY }}
+      - name: Verify dotfiles
+        run: |
+          source ~/.bashrc
+          hello
+          type hello
+          type fish
+          fish --version
+          type atuin
+          atuin --version
+          type http
+          http --version
+          type teller
+          teller version
+          type deno
+          deno --version
+          type lvim
+          lvim --version
+          type git
+          git --version
+          type gh
+          gh --version
+          type jq
+          jq --version
+          type tig
+          tig --version
+          type zellij
+          zellij --version
+          type go
+          go version
+          type zig
+          zig version
+          type pulumi
+          pulumi version
+          type gleam
+          gleam --version
+          type elixir
+          elixir --version
+          type terraform
+          terraform version
+          type fzf
+          fzf --version
+          type bat
+          bat --version
+          type uv
+          uv --version
+          type direnv
+          direnv --version
+          type ruff
+          ruff --version
+          type vim
+          vim --version
+          type rg
+          rg --version
+          type glow
+          glow --version
+          type skate
+          skate --version
+          type kubectl
+          kubectl version --client
+          type docker
+          docker --version
+          type rye
+          rye --version
+          type minikube
+          minikube version
+          type bun
+          bun --version
+          type tofu
+          tofu --version
+          type lima
+          lima --version
+          type wasmer
+          wasmer --versionw
+          printenv | grep -q '^CARGO_REGISTRY_TOKEN='
+          printenv | grep -q '^CF_AWS_ACCESS_KEY_ID='
+          printenv | grep -q '^CF_AWS_SECRET_ACCESS_KEY='
+          printenv | grep -q '^CLOUDFLARE_ROOT_KEY='
+          printenv | grep -q '^CLOUDFLARE_WORKER_TOKEN='
+          printenv | grep -q '^DAGGER_CLOUD_TOKEN='
+          printenv | grep -q '^DENO_DEPLOY_TOKEN='
+          printenv | grep -q '^HEX_API_KEY='
+          printenv | grep -q '^MVOLA_CONSUMER_KEY='
+          printenv | grep -q '^MVOLA_CONSUMER_SECRET='
+          printenv | grep -q '^NETLIFY_AUTH_TOKEN='
+          printenv | grep -q '^PULUMI_ACCESS_TOKEN='
+          printenv | grep -q '^SHUTTLE_API_KEY='
+          printenv | grep -q '^SONAR_TOKEN='
+          printenv | grep -q '^SPIN_AUTH_TOKEN='
+          printenv | grep -q '^WASMER_TOKEN='
+          envhub status
+          rm ~/.envhub/secrets
