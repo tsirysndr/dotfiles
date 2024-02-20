@@ -27,6 +27,7 @@ jobs:
       - name: Verify dotfiles
         shell: bash -i -e -o pipefail {0}
         run: |
+          ls -la ~/.bashrc
           hello
           type rtx
           rtx --version
