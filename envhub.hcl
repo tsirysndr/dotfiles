@@ -13,18 +13,15 @@ homebrew {
     "atuin",
     "dagger",
     "fish",
-    "httpie",
     "oh-my-posh",
     "opam",
     "snyk-cli",
-    "tig",
     "vim"
   ]
 }
 
 pkgx {
   packages = [
-    "atuin",
     "bat",
     "buf",
     "bun",
@@ -41,7 +38,6 @@ pkgx {
     "go",
     "grype",
     "http",
-    "httpie",
     "jq",
     "kubectl",
     "lima",
