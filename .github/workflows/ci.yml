@@ -31,6 +31,8 @@ jobs:
           hello
           type nix
           nix --version
+          type litecli
+          litecli --version
           type glab
           glab --version
           type turso

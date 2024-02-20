@@ -13,6 +13,7 @@ homebrew {
     "atuin",
     "dagger",
     "fish",
+    "litecli",
     "oh-my-posh",
     "opam",
     "snyk-cli",
