@@ -12,7 +12,9 @@ homebrew {
   packages = [
     "fish",
     "atuin",
-    "httpie"
+    "httpie",
+    "vim",
+    "tig"
   ]
 }
 
@@ -24,7 +26,6 @@ pkgx {
     "git",
     "gh",
     "jq",
-    "tig",
     "zellij",
     "http",
     "go",
@@ -38,7 +39,6 @@ pkgx {
     "direnv",
     "uv",
     "ruff",
-    "vim",
     "rg",
     "glow",
     "skate",

@@ -13,13 +13,11 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-    defaults:
-      run:
-        shell: bash
     steps:
       - uses: actions/checkout@v2
       - name: Remove existing bashrc
-        run: rm -f ~/.bashrc
+        run: |
+          [ -f $HOME/.bashrc ] && rm $HOME/.bashrc || true
       - uses: tsirysndr/setup-envhub@v1
         with:
           version: "v0.2.10"
@@ -27,8 +25,8 @@ jobs:
         env:
           CLOUDFLARE_ROOT_KEY: ${{ secrets.CLOUDFLARE_ROOT_KEY }}
       - name: Verify dotfiles
+        shell: bash
         run: |
-          source ~/.bashrc
           hello
           type hello
           type fish
