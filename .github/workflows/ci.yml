@@ -29,6 +29,14 @@ jobs:
         run: |
           ls -la ~/.bashrc
           hello
+          type nix
+          nix --version
+          type glab
+          glab --version
+          type turso
+          turso --version
+          type pscale
+          pscale version
           type gitleaks
           gitleaks version
           type buf
