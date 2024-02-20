@@ -32,6 +32,8 @@ jobs:
           type brew
           type fish
           fish --version
+          type tilt
+          tilt version
           type atuin
           atuin --version
           type http
