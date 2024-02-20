@@ -25,6 +25,7 @@ jobs:
       - name: Verify dotfiles
         shell: bash
         run: |
+          source ~/.bashrc
           hello
           type hello
           type fish
