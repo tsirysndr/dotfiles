@@ -16,6 +16,8 @@ homebrew {
     "vim",
     "tig",
     "oh-my-posh",
+    "opam",
+    "dagger"
   ]
 }
 
