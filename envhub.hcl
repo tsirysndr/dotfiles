@@ -26,6 +26,7 @@ pkgx {
   packages = [
     "atuin",
     "bat",
+    "buf",
     "bun",
     "deno",
     "dhall",

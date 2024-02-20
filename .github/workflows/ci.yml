@@ -29,6 +29,8 @@ jobs:
         run: |
           ls -la ~/.bashrc
           hello
+          type buf
+          buf --version
           type rtx
           rtx --version
           type node
