@@ -96,7 +96,7 @@ jobs:
           type lima
           lima --version
           type wasmer
-          wasmer --versionw
+          wasmer --version
           printenv | grep -q '^CARGO_REGISTRY_TOKEN='
           printenv | grep -q '^CF_AWS_ACCESS_KEY_ID='
           printenv | grep -q '^CF_AWS_SECRET_ACCESS_KEY='
