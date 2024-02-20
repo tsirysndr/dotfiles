@@ -55,7 +55,6 @@ pkgx {
     "ruff",
     "rye",
     "skate",
-    "snyk-cli",
     "tell",
     "terraform",
     "tilt",
