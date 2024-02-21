@@ -1,5 +1,6 @@
 packages = [
-  "hello"
+  "hello",
+  "bun"
 ]
 
 file ".bashrc" {
@@ -11,7 +12,6 @@ secrets = ["CLOUDFLARE_ROOT_KEY"]
 homebrew {
   packages = [
     "atuin",
-    "bun",
     "dagger",
     "fish",
     "jsonnet",
