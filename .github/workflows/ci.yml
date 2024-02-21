@@ -31,6 +31,17 @@ jobs:
           hello
           type nix
           nix --version
+          type jsonnet
+          jsonnet --version
+          type cue
+          cue version
+          type tmux
+          type fd
+          fd --version
+          type tree
+          tree --version
+          type eza
+          eza --version
           type litecli
           litecli --version
           type glab
