@@ -15,6 +15,22 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
+      - name: Cache Pkgx directory (Linux)
+        if: runner.os == 'Linux'
+        uses: actions/cache@v2
+        with:
+          path: /home/runner/.pkgx
+          key: ${{ runner.os }}-dotfiles-pkgx
+          restore-keys: |
+            ${{ runner.os }}-dotfiles-pkgx-
+      - name: Cache Pkgx directory (macOS)
+        if: runner.os == 'macOS'
+        uses: actions/cache@v2
+        with:
+          path: /Users/runner/.pkgx
+          key: ${{ runner.os }}-dotfiles-pkgx
+          restore-keys: |
+            ${{ runner.os }}-dotfiles-pkgx-
       - name: Cache Homebrew directory (Linux)
         if: runner.os == 'Linux'
         uses: actions/cache@v2
