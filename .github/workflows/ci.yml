@@ -39,14 +39,6 @@ jobs:
           key: ${{ runner.os }}-dotfiles-brew
           restore-keys: |
             ${{ runner.os }}-dotfiles-brew-
-      - name: Cache Homebrew directory (MacOS)
-        if: runner.os == 'macOS'
-        uses: actions/cache@v2
-        with:
-          path: /Users/runner/Library/Caches/Homebrew
-          key: ${{ runner.os }}-dotfiles-brew
-          restore-keys: |
-            ${{ runner.os }}-dotfiles-brew-
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: tsirysndr/setup-envhub@v1
