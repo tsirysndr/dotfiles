@@ -8,7 +8,7 @@ This is a collection of my personal dotfiles. I use these to configure my system
 > * All my dotfiles, secrets and packages are restored by [envhub](https://github.com/tsirysndr/envhub) from this repository.
 > * All my secrets are encrypted and stored in [Google Secret Manager](https://cloud.google.com/secret-manager) and  [Cloudflare Workers Secrets](https://developers.cloudflare.com/workers/configuration/secrets/), see [secrets](https://github.com/tsirysndr/secrets) for more details.
 
-## 🚚 Installation
+## 🚚 Install
 
 ```sh
 envhub use github:tsirysndr/dotfiles
