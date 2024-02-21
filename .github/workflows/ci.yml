@@ -15,11 +15,19 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
-      - name: Cache Homebrew directory
+      - name: Cache Homebrew directory (Linux)
         if: runner.os == 'Linux'
         uses: actions/cache@v2
         with:
           path: /home/linuxbrew/.linuxbrew
+          key: ${{ runner.os }}-dotfiles-brew
+          restore-keys: |
+            ${{ runner.os }}-dotfiles-brew-
+      - name: Cache Homebrew directory (MacOS)
+        if: runner.os == 'macOS'
+        uses: actions/cache@v2
+        with:
+          path: /Users/runner/Library/Caches/Homebrew
           key: ${{ runner.os }}-dotfiles-brew
           restore-keys: |
             ${{ runner.os }}-dotfiles-brew-
