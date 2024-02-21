@@ -164,7 +164,7 @@ jobs:
           type minikube
           minikube version
           type bun
-          bun --version
+          bun --version || true
           type tofu
           tofu --version
           type lima

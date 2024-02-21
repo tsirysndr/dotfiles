@@ -1,6 +1,5 @@
 packages = [
-  "hello",
-  "bun"
+  "hello"
 ]
 
 file ".bashrc" {
@@ -41,6 +40,7 @@ pkgx {
     "bat",
     "bazelisk",
     "buf",
+    "bun",
     "cue",
     "deno",
     "dhall",
