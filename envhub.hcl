@@ -39,6 +39,7 @@ homebrew {
 pkgx {
   packages = [
     "bat",
+    "bazelisk",
     "buf",
     "cue",
     "deno",

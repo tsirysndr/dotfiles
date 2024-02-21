@@ -50,6 +50,8 @@ jobs:
           hello
           type nix
           nix --version
+          type bazelisk
+          bazelisk --version
           type jsonnet
           jsonnet --version
           type cue
