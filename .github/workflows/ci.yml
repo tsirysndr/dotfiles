@@ -58,6 +58,10 @@ jobs:
           hello
           type nix
           nix --version
+          type nim
+          nim --version
+          type protoc
+          protoc --version
           type bazelisk
           bazelisk --version
           type jsonnet
