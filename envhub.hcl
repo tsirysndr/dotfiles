@@ -7,6 +7,19 @@ file ".bashrc" {
   source = "dotfiles/.bashrc"
 }
 
+file ".config/fish/config.fish" {
+  source = "dotfiles/.config/fish/config.fish"
+}
+
+file ".config/fish/fish_variables" {
+  source = "dotfiles/.config/fish/fish_variables"
+}
+
+file ".teller.yml" {
+  source = "dotfiles/.teller.yml"
+}
+
+
 secrets = ["CLOUDFLARE_ROOT_KEY"]
 
 homebrew {

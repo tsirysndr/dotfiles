@@ -15,6 +15,14 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
+      - name: Cache Homebrew directory
+        if: runner.os == 'ubuntu-latest'
+        uses: actions/cache@v2
+        with:
+          path: /home/linuxbrew/.linuxbrew
+          key: ${{ runner.os }}-dotfiles-brew
+          restore-keys: |
+            ${{ runner.os }}-dotfiles-brew-
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: tsirysndr/setup-envhub@v1
@@ -28,6 +36,9 @@ jobs:
         shell: bash -i -e -o pipefail {0}
         run: |
           ls -la ~/.bashrc
+          ls -la ~/.teller.yml
+          ls -la ~/.config/fish/config.fish
+          ls -la ~/.config/fish/fish_variables
           hello
           type nix
           nix --version
