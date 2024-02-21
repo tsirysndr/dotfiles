@@ -34,7 +34,7 @@ pkgx {
     "docker",
     "elixir",
     "eza",
-    "fd"
+    "fd",
     "fzf",
     "gh",
     "git",
