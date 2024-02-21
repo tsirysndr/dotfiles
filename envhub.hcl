@@ -11,6 +11,7 @@ secrets = ["CLOUDFLARE_ROOT_KEY"]
 homebrew {
   packages = [
     "atuin",
+    "bun",
     "dagger",
     "fish",
     "jsonnet",
@@ -26,7 +27,6 @@ pkgx {
   packages = [
     "bat",
     "buf",
-    "bun",
     "cue",
     "deno",
     "dhall",
