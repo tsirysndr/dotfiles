@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Cache Homebrew directory
-        if: runner.os == 'ubuntu-latest'
+        if: runner.os == 'Linux'
         uses: actions/cache@v2
         with:
           path: /home/linuxbrew/.linuxbrew
