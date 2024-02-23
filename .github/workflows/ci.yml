@@ -60,8 +60,8 @@ jobs:
           nix --version
           type rustup
           rustup --version
-          rustup toolchain list --installed
-          rustup component list --installed
+          rustup toolchain list
+          rustup component list
           type nim
           nim --version
           type protoc
