@@ -43,7 +43,7 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: tsirysndr/setup-envhub@v1
         with:
-          version: v0.2.11
+          version: v0.2.12
           dotfiles: github:tsirysndr/dotfiles
           options: --backup
         env:
@@ -58,6 +58,10 @@ jobs:
           hello
           type nix
           nix --version
+          type rustup
+          rustup --version
+          rustup toolchain list --installed
+          rustup component list --installed
           type nim
           nim --version
           type protoc

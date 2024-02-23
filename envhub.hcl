@@ -98,3 +98,17 @@ rtx {
     "node@19.8.1"
   ]
 }
+
+rustup {
+  default = "stable"
+  toolchains = [
+    "nightly"
+  ]
+  components = [
+    "clippy",
+    "llvm-tools"
+  ]
+  targets = [
+    "wasm32-wasi",
+  ]
+}
