@@ -59,6 +59,7 @@ pkgx {
     "go",
     "grype",
     "http",
+    "hurl",
     "jq",
     "kubectl",
     "lima",
