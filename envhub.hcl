@@ -30,6 +30,7 @@ homebrew {
     "litecli",
     "oh-my-posh",
     "opam",
+    "pixi",
     "snyk-cli",
     "vim"
   ]
