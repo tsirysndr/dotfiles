@@ -43,7 +43,7 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: tsirysndr/setup-envhub@v1
         with:
-          version: v0.2.12
+          version: v0.2.16
           dotfiles: github:tsirysndr/dotfiles
           options: --backup
         env:
