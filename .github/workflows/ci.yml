@@ -171,8 +171,6 @@ jobs:
           kubectl version --client
           type docker
           docker --version
-          type rye
-          rye --version
           type minikube
           minikube version
           type bun
